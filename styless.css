@@ -1,121 +1,246 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
 
-body{
-    --twitter-color:#50b7f5;
-    --twitter-background:#e6ecf0;
+/* Header */
+.header_left_img{
+    object-fit:contain;
+    height:50px;
+    margin-left:5px;
+
 }
-.sidebaroption{
+
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid whitesmoke;
+
+}
+.header_left{
+    display: flex;
+    align-items: center;
+
+}
+.header_left_span{
+    padding: 10px;
+    cursor:pointer;
+}
+.header_middle{
+    display: flex;
+    flex:0.7;
+    align-items:center;
+    background-color: whitesmoke;
+    padding:10px;
+    border-radius: 5px;
+}
+.material-icons{
+    color: gray;
+
+}
+
+.header_middle_input{
+    border:none;
+    width: 100%;
+    padding: 10px;
+    outline:none;
+    font-size: medium;
+    background-color:transparent;
+}
+
+.header_right{
+    display: flex;
+    padding-right:20px;
+
+}
+
+.header_right_span{
+    padding: 10px;
+    cursor: pointer;
+}
+/*sidebar*/
+.sidebar{
+    flex: 0.3;
+    max-width: 300px;
+    padding-right: 20px;
+}
+.sidebar_compose{
+    margin-top: 15px;
+    margin-left:10px ;
+    margin-bottom:15px;
+    text-transform:capitalize;
+    color: gray;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: white;
     display: flex;
     align-items: center;
     cursor: pointer;
-
-}
-.sidebaroption .material-icons,.fa-twitter{
-    padding: 18px;
-}
-
-.sidebaroption h2{
-    font-weight:800 ;
-    font-size:20px;
-    margin-right:20px; ;
-}
-
-.sidebaroption:hover{
-    background-color: var(--twitter-background);
-    border: 30px;
-    color:var(--twitter-color);
-    transition:color 100ms ease-out;
-}
-.sidebaroption.active{
-    color: var(--twitter-color);
-}
-.sidebar_tweet{
-    width: 100%;
-    background-color: var(--twitter-color);
+    outline: none;
     border: none;
-    color: white;
-    font-weight: 800;
-    border-radius: 30px;
-    height: 50px;
-    margin-top: 10px;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0,0, 0.75);
 }
 
-body{
+.sidebar_compose_span{
+    margin-right: 5px;
+}
+.sidebarOption{
     display: flex;
+    align-items:center;
+    height: 0 10px;
+    cursor: pointer;
+    color:dimgray;
+    width: 200px;
+}
+
+.sidebarOption .material-icons{
+    padding: 5px;
+}
+
+.sidebarOption h3{
+    flex:1;
+    margin-left:10px;
+    font-size:14px;
+    font-weight:400;
+}
+
+.sidebarbtn{
+    background-color:white;
+    border: black;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-weight: 500px;
+}
+.sidebarbtn:hover{
+    background-color:#c04b37;
+    font-weight: 600px;
+}
+.sidebar_footer{
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar_footerIcons.material-icons{
+    margin: 7px;
+    cursor:pointer;
+}
+/* main body */
+.main_body{
+    display:flex;
     height: 100vh;
-    max-width: 1300px;
-    margin-left:auto;
-    margin-right: auto;
-    padding: 0 10px;
 }
-
-.sidebar{
-    border-right: 1px solid var(--twitter-background);
-    flex:0.2;
-    min-width: 250px;
-    margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+body{
+    height: 100vh;
+    overflow-y: hidden;
+}
+/* emaillist style */
+.emaillist{
+    flex: 1;
+    overflow: scroll;
 
 }
-.fa-twitter{
-    color: var(--twitter-color);
-    font-size: 30px;
-}
-
-/* feed */
-.feed{
-    flex: 0.5;
-    border-right:1px solid var(--twitter-background);
-    min-width: fit-content;
-    overflow-y: scroll;
-}
-.feed_header{
+.email_set{
     position: sticky;
     top:0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+    background-color:white;
+    z-index: 999;
+    padding: 8px;
+}
+.email_setLeft{
+    display: flex;
+    align-items: center;
+}
+.email_set.material-icons{
+        margin: 5px;
+        cursor: pointer;
+}
+.section{
+    display: flex;
+    align-items: center;
+    border-bottom-width:2px ;
+    padding: 15px;
+    min-width: 200px;
+    cursor: pointer;
+    color: grey;
+    border-width:0; 
+}
+.emaillist_sections{
+    position: sticky;
+    top:0;
+    display:flex;
     background-color: white;
-    z-index: 100;
-    border:1px solid var(--twitter-background);
-    padding:15px 20px;
+    border-bottom: 1px solid white;
+    z-index: 999;
 }
-.feed_header h2{
-    font-size:20px;
-    font-weight: 800;
+.section_selected{
+    background-color:whitesmoke;
+    border-width: 3px;
+    color:red;
+    border-bottom: 3px solid red;
+
 }
-.feed::-webkit-scrollbar{
-    display: none;
+.section_selected.material-icons{
+    color: red;
 }
-.feed{
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.section:hover{
+    background-color: whitesmoke;
+    border-width: 3px;
+}
+.section.h4{
+    font-size: 14px;
+    margin-left:15px ;
+}
+.emailrow_options{
+    display: flex;
+    align-items: center;
+}
+.emailrow_options .material-icons,input{
+margin: 5px;
 }
 
-/* tweet box */
-.tweetBox_input img{
-    border-radius: 50%;
+.email_row{
+    display: flex;
+    align-items: center;
     height: 50px;
+    border-bottom: 1px solid whitesmoke;
+    cursor:pointer;
+    z-index: 999;
 }
-.tweetBox{
-    padding-bottom: 10px;
-    border-bottom: 8px solid var(--twitter-background);
+.email_row:hover{
+    border-top:1px solid whitesmoke;
+    box-shadow: 0 4px 4px -2px rgba(0,0 , 0, 0.24);
 }
-.tweetBox form{
+.email_row_message{
     display: flex;
-    flex-direction:column;
-}
-.tweetBox_input{
-    display: flex;
-    padding: 20px;
-}
+    flex: 0.8;
+    align-items: center;
+    font-size: 13px;
 
-.tweetBox_input input{
-    flex: 1;
-    margin-left: 20px;
-    font-size:20px;
-    border: none;
-    outline:none;
+}
+.email_row_message h4{
+    width:400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.email_row_title{
+    font-size: 13px;
+    flex: 0.3;
+}
+.email_row_time{
+    padding: 15px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.emailrow_description{
+    font-weight: 400;
+    color:grey;
 }
