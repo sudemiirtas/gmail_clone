@@ -1,76 +1,257 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitter Clone</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Iconlari -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Gmail UI Clone</title>
 </head>
 <body>
-    <!-- sidebar starts -->
-    <div class="sidebar">
-        <i class="fab fa-twitter"></i>
-        <div class="sidebaroption active">
-            <span class="material-icons">home</span>
-            <h2>Home</h2>
-        </div>
-        <div class="sidebaroption">
-            <span class="material-icons">search</span>
-            <h2>Explore</h2>
-        </div>
-        <div class="sidebaroption">
-            <span class="material-icons">notifications</span>
-            <h2>Notifications</h2>
-        </div>
-        <div class="sidebaroption">
-            <span class="material-icons">mail</span>
-            <h2>Messages</h2>
-        </div>
-        <div class="sidebaroption">
-            <span class="material-icons">bookmarks</span>
-            <h2>Bookmarks</h2>
-        </div>
-        <div class="sidebaroption">
-            <span class="material-icons">list_alt</span>
-            <h2>Lists</h2>
-        </div>
-        <div class="sidebaroption">
-            <span class="material-icons">person</span>
-            <h2>Profile</h2>
-        </div>
-        <div class="sidebaroption">
-            <span class="material-icons">more_horiz</span>
-            <h2>More</h2>
-        </div>
-        <button class="sidebar_tweet">Tweet</button>
-    </div>
-    <!-- sidebar ends -->
-
-    <!-- feed start -->
-    <div class="feed">
-        <div class="feed_header">
-            <h2>Home</h2>
-        </div>
-
-        <!-- tweet box starts -->
-        <div class="tweetBox">
-            <form>
-                <div class="tweetBox_input">
-                    <img src="twitter pp.png" alt="Profile Picture"/>
-                    <input type="text" placeholder="What's happening?"/>
-                </div>
-                <button class="tweetBox_tweetButton">Tweet</button>
-            </form>
-        </div>
+    <!-- header baslangic -->
+    <div class="header">
+        <div class="header_left">
+            <span class="material-icons">menu</span>
+            <img src="images.jpg" class="header_left_img"alt=""/>
         
-        <!-- tweet box ends -->
+            </div>
+
+        <div class="header_middle">
+            <span class="material-icons">search</span>
+            <input type="text"placeholder="Search Mail">
+        </div>
+
+        <div class="header_right">
+            <span class="material-icons">apps</span>
+            <span class="material-icons">notifications</span>
+            <span class="material-icons">account_circle</span>
+        </div>
 
     </div>
+    <!-- header end -->
+    <!-- main body start -->
+   <div class="main_body">
+        <!-- sidebar start -->
+        <div class="sidebar">
+            <button class="sidebar_compose">
+                <span class="material-icons">add</span>
+                compose
+            </button>
+            <div class="sidebarOption sidebarbtn">
+                <span class="material-icons">inbox</span> 
+                <h3>Inbox</h3>
+            </div>
+            <div class="sidebarOption sidebarbtn">
+                <span class="material-icons">star</span> 
+                <h3>Starred</h3>
+            </div>
+            <div class="sidebarOption sidebarbtn">
+                <span class="material-icons">access_time</span> 
+                <h3>Snoozed</h3>
+            </div>
+            <div class="sidebarOption sidebarbtn">
+                <span class="material-icons">label_important</span> 
+                <h3>Important</h3>
+            </div>
+            <div class="sidebarOption sidebarbtn">
+                <span class="material-icons">near_me</span> 
+                <h3>Sent</h3>
+            </div>
+            <div class="sidebarOption sidebarbtn">
+                <span class="material-icons">note</span> 
+                <h3>Drafts</h3>
+            </div>
+            <div class="sidebarOption sidebarbtn">
+                <span class="material-icons">expand_more</span> 
+                <h3>More</h3>
+            </div>
+
+            <div class="sidebar_footer">
+                <div class="sidebar_footerIcons">
+                    <span class="material-icons">person</span> 
+                    <span class="material-icons">duo</span> 
+                    <span class="material-icons">phone</span> 
+                </div>
+            </div>
+        </div>
+
+   
+
+      <!-- sidebar ends -->
+    <!-- email list start -->
+    <div class="emaillist">
+    <!-- settings starts -->
+        <div class="email_set">
+        <div class="email_setLeft">
+            <input type="checkbox">
+            <span class="material-icons">arrow_drop_down</span>
+            <span class="material-icons">redo</span>
+            <span class="material-icons">more_vert</span>
+        </div>
+        <div class="email_setRight">
+            <span class="material-icons">chevron_left</span>
+            <span class="material-icons">chevron_right</span>
+            <span class="material-icons">keyboard_hide</span>
+            <span class="material-icons">settings</span>
+        </div>
+    </div>
+    <!-- settings ends -->
+    <!-- section star -->
+    <div class="emaillist_sections">
+        <div class="section section_selected">
+            <span class="material-icons">inbox</span>
+            <h4>Primary</h4>
+        </div>
+        <div class="section">
+            <span class="material-icons">people</span>
+            <h4>Social</h4>
+        </div>
+        <div class="section">
+            <span class="material-icons">local_offer</span>
+            <h4>Promotions</h4>
+        </div>
+    </div>
+
+    <!-- section ends -->
+    <!-- email list row starts -->
+    <div class="emaillist_list">
+
+       <!-- email row starts -->
+       <div class="email_row">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">label_important</span>
+            </div>
+            <h3 class="email_row_title">Linkedin</h3>
+            <div class="email_row_message">
+                <h4>Yeni bir iş sizi bekliyor!<span class="emailrow_description"></span>-Linkedin Ekibi</h4>
+            </div>
+            <p class="email_row_time">16 Ag</p>
+       </div>
+       <!-- email row ends -->
+             <!-- email row starts -->
+             <div class="email_row">
+                <div class="emailrow_options">
+                    <input type="checkbox">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">label_important</span>
+                </div>
+                <h3 class="email_row_title">Trendyol</h3>
+                <div class="email_row_message">
+                    <h4>Siparişiniz Teslim Edilmiştir <span class="emailrow_description"></span>-Trendyol</h4>
+                </div>
+                <p class="email_row_time">16 Ag</p>
+           </div>
+           <!-- email row ends -->
+              <!-- email row starts -->
+       <div class="email_row">
+        <div class="emailrow_options">
+            <input type="checkbox">
+            <span class="material-icons">star_border</span>
+            <span class="material-icons">label_important</span>
+        </div>
+        <h3 class="email_row_title">amazon.com.tr</h3>
+        <div class="email_row_message">
+            <h4>Siparişiniz Yola Çikmiştir <span class="emailrow_description"></span>-Amazon Ekibi</h4>
+        </div>
+        <p class="email_row_time">15 Ag</p>
+   </div>
+   <!-- email row ends -->
+         <!-- email row starts -->
+         <div class="email_row">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">label_important</span>
+            </div>
+            <h3 class="email_row_title">Pegasus Fly</h3>
+            <div class="email_row_message">
+                <h4>Budapeşte(Macaristan) Uçak Biletiniz İçin Check-In Yapin <span class="emailrow_description"></span>-Pegasus Fly Ekibi</h4>
+            </div>
+            <p class="email_row_time">15 Ag</p>
+       </div>
+       <!-- email row ends -->
+             <!-- email row starts -->
+             <div class="email_row">
+                <div class="emailrow_options">
+                    <input type="checkbox">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">label_important</span>
+                </div>
+                <h3 class="email_row_title">Ziraat Bankasi</h3>
+                <div class="email_row_message">
+                    <h4>Sayin SUDE DEMİRTAŞ 14.08.2023 tarihinde,saat 07.45'de ELON MUSK tarafindan<span class="emailrow_description"></span>-Ziraat Bankasi</h4>
+                </div>
+                <p class="email_row_time">14 Ag</p>
+           </div>
+           <!-- email row ends -->
+                 <!-- email row starts -->
+       <div class="email_row">
+        <div class="emailrow_options">
+            <input type="checkbox">
+            <span class="material-icons">star_border</span>
+            <span class="material-icons">label_important</span>
+        </div>
+        <h3 class="email_row_title">Ziraat Bankasi</h3>
+        <div class="email_row_message">
+            <h4>Sayin SUDE DEMİRTAŞ 14.08.2023 tarihinde,saat 06.45'de BİLL GATES tarafindan <span class="emailrow_description"></span>-Ziraat Bankasi</h4>
+        </div>
+        <p class="email_row_time">14 Ag</p>
+   </div>
+   <!-- email row ends -->
+         <!-- email row starts -->
+         <div class="email_row">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">label_important</span>
+            </div>
+            <h3 class="email_row_title">Udemy</h3>
+            <div class="email_row_message">
+                <h4>Derse devam etmek için <span class="emailrow_description"></span>-Udemy Ekibi</h4>
+            </div>
+            <p class="email_row_time">10pm</p>
+       </div>
+       <!-- email row ends -->
+             <!-- email row starts -->
+             <div class="email_row">
+                <div class="emailrow_options">
+                    <input type="checkbox">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">label_important</span>
+                </div>
+                <h3 class="email_row_title">GitHub</h3>
+                <div class="email_row_message">
+                    <h4>Projeniniz en hizli yükselişte !<span class="emailrow_description"></span>-GitHub Ekibi</h4>
+                </div>
+                <p class="email_row_time">10pm</p>
+           </div>
+           <!-- email row ends -->
+                 <!-- email row starts -->
+       <div class="email_row">
+        <div class="emailrow_options">
+            <input type="checkbox">
+            <span class="material-icons">star_border</span>
+            <span class="material-icons">label_important</span>
+        </div>
+        <h3 class="email_row_title">Chess.com</h3>
+        <div class="email_row_message">
+            <h4>Chess.com Hoşgeldiniz <span class="emailrow_description"></span>-Chess Ekibi</h4>
+        </div>
+        <p class="email_row_time">10pm</p>
+   </div>
+   <!-- email row ends -->   
+    </div>
+    <!-- email list row ends -->
+    </div>
+    <!-- email list start -->
 
 
 
-    <!-- feed end -->
+    <!-- main body ending -->
+   </div>
+
+
 </body>
 </html>
